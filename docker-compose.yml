@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  next-docker:
+    image: mjshuff23/next-docker
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: next-docker
+    restart: always
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
